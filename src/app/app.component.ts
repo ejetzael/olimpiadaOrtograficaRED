@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   title = 'academind';
 
-  opened: false;
+  opened:any = false;
 
   constructor(){}
 

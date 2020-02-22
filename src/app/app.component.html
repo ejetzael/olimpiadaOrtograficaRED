@@ -7,22 +7,22 @@
         <mat-nav-list>
             <a mat-list-item routerLink="home" routerLinkActive="active">Inicio</a>
             <a mat-list-item routerLink="convocatoria" routerLinkActive="active">Convocatoria</a>
-            <a mat-list-item routerLink="semifinales" routerLinkActive="active">Semi Final</a>
-            <a mat-list-item routerLink="finalistas" routerLinkActive="active">Finalistas</a>
+            <a mat-list-item disabled>Semi Final</a>
+            <a mat-list-item disabled>Finalistas</a>
         </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>   
         <mat-toolbar color="primary" class="header-toolbar">
             <div class="toolbar-logo" >
-                <button mat-button>
-                <mat-icon aria-hidden="false" (click)="opened=!opened" >dehaze</mat-icon>
+                <button mat-button (click)="opened=!opened">
+                <mat-icon>dehaze</mat-icon>
                 </button>
             </div>
             <div class="toolbar-botonera">
                 <a mat-button routerLink="home" routerLinkActive="active">Inicio</a>
                 <a mat-button routerLink="convocatoria" routerLinkActive="active">Convocatoria</a>
-                <a mat-button routerLink="semifinales" routerLinkActive="active">Semi Final</a>
-                <a mat-button routerLink="finalistas" routerLinkActive="active">Finalistas</a>
+                <a mat-button disabled>Semi Final</a>
+                <a mat-button disabled>Finalistas</a>
             </div>
             <div class="toolbar-loguer">
                 <a mat-stroked-button disabled>Login</a>
