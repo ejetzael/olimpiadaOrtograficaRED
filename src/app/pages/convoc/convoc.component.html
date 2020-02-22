@@ -1,0 +1,151 @@
+
+<article class="ed-container mg-top-1">
+
+  <section class="ed-container ed-item item-contraccion">
+    <div class="ed-container ed-item single-card">
+
+      <div class="ed-item ">
+        <h3 class="titulo">
+          <picture class="titulo-imagen">
+            <source media="(max-width: 650px)" srcset="./assets/images/convocatoria-t.svg">
+              <img src="./assets/images/convocatoria-t.svg" alt="Objetivo con svg">
+          </picture>
+        </h3>
+      </div>
+      <div class="ed-container ed-item m-center">
+        <div class="ed-item s-block-center txt-semilight">
+          <p>Te invitamos a leer con detalle nuestra convocatoria. Es importante tener en cuenta todos los requisitos para llevar acabo tu registro. Cualquier aspecto no establecido en dicha convocatoria se tratará directamente en el correo: olimpiadaredlarousse@gmail.com</p>
+        </div>
+
+        <div class="ed-item s-block-center">
+          <p class="txt-semilight">Se podrá participar en dos categorías:</p>
+            <ul class="lista-onored">
+              <li>Intermedio (4° a 6° de primaria)</li>
+              <li>Avanzado (1° a 3° de secundaria)</li>
+            </ul>
+          <p class="txt-semilight">Divididas en las siguientes zonas:</p>
+            <ul class="lista-onored">
+              <li>Centro-Sur: Puebla, Tlaxcala, Veracruz, Yucatán, Chiapas, Morelos y Morelia</li>
+              <li>Bajío: Querétaro, Guanajuato y Aguascalientes</li>
+              <li>Metropolitana: Ciudad de México, Estado de México</li>
+            </ul>
+          <p>
+            <a mat-flat-button color="accent" href="./assets/download/convocatoria-1olimpiada-n-ortografia-red-200220.pdf" target="_blank">Consulta el pdf de la convocatoria extendida para más detalles. <mat-icon aria-hidden="false" aria-label="Ver pdf">keyboard_arrow_down</mat-icon>
+            </a>
+          </p>
+        </div>
+      </div>
+      <div class="ed-item">
+        <p class="txt-semilight m-center m-bottom-1">Este es el calendario de actividades:</p>
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" color="danger">
+
+          <ng-container matColumnDef="actividad">
+            <th mat-header-cell *matHeaderCellDef> Actividad </th>
+            <td mat-cell *matCellDef="let element"> {{element.actividad}} </td>
+          </ng-container>
+          <ng-container matColumnDef="fecha">
+            <th mat-header-cell *matHeaderCellDef> Fecha </th>
+            <td mat-cell *matCellDef="let element"> {{element.fecha}} </td>
+          </ng-container>
+        
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+      </div>
+
+    </div>
+    <aside class="ed-item manchones">
+      <p class="s-40 s-to-right">
+        <img src="./assets/images/manchon-az.svg" alt="">
+      </p>
+    </aside>
+  </section>
+
+  <section class="ed-container ed-item item-contraccion">
+    <div class="ed-container ed-item single-card">
+ 
+      <div class="ed-item ">
+        <h3 class="titulo">
+          <picture class="titulo-imagen">
+            <source media="(max-width: 650px)" srcset="./assets/images/participantes.svg">
+              <img src="./assets/images/participantes.svg" alt="participantes con svg">
+          </picture>
+        </h3>
+      </div>
+      <div class="ed-container ed-item ">
+        <div class="ed-item l-100 m-100 s-100 s-block-center">
+          <ul class="listado-participantes">
+            <li>
+              <img src="./assets/images/shield.png" alt="">
+            </li>
+            <li>
+              <img src="./assets/images/shield.png" alt="">
+            </li>
+            <li>
+              <img src="./assets/images/shield.png" alt="">
+            </li>
+            <li>
+              <img src="./assets/images/shield.png" alt="">
+            </li>
+            <li>
+              <img src="./assets/images/shield.png" alt="">
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+    <aside class="ed-item manchones">
+      <p class="s-40 s-to-right">
+        <img src="./assets/images/manchon-a.svg" alt="">
+      </p>
+    </aside>
+  </section>
+
+  <section class="ed-container ed-item item-contraccion">
+    <div class="ed-container ed-item single-card">
+
+        <div class="ed-container ed-item m-center">
+          <div class="ed-item s-block-center txt-semilight">
+            <p>Descarga la convocatoria en pdf para compartirla con tus estudiantes o los padres de familia.</p>
+          </div>
+          <div class="ed-item s-block-center">
+            <a mat-fab color="primary" 
+            href="./assets/download/convocatoria-1olimpiada-n-ortografia-red-200220.pdf" target="_blank">
+              <mat-icon>cloud_download</mat-icon>
+            </a>
+          </div>
+        </div>
+
+    </div>
+    <aside class="ed-item manchones">
+      <p class="s-80 s-to-right">
+        <img src="./assets/images/manchon-az.svg" alt="">
+      </p>
+    </aside>
+  </section>
+
+  <section class="ed-container ed-item item-contraccion">
+    <div class="ed-container ed-item single-card">
+
+        <div class="ed-container ed-item m-center">
+          <div class="ed-item s-block-center txt-semilight">
+            <p>Descarga el <b>Aviso de Privacidad</b> que el coach debe entregar firmado por los padres o tutores del participante.</p>
+          </div>
+          <div class="ed-item s-block-center">
+            <a mat-fab color="accent" 
+            href="./assets/download/aviso-privacidad-1onoredl.pdf" target="_blank">
+              <mat-icon>cloud_download</mat-icon>
+            </a>
+          </div>
+        </div>
+
+    </div>
+    <aside class="ed-item manchones">
+      <p class="s-40 s-to-right">
+        <img src="./assets/images/manchon-r.svg" alt="">
+      </p>
+    </aside>
+  </section>
+
+</article>

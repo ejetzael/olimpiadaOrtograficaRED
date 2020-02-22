@@ -1,0 +1,27 @@
+<mat-toolbar color="primary" class="footer-toolbar">
+
+    <div class="toolbar-logo">
+      <div class="ftoolbar-creditos">
+        <p><a mat-button href="https://red-larousse.com.mx/" target="_blank">© RED Larousse {{ anio }}</a></p>
+        <p>Convocatoria exclusiva para colegios RED Larousse</p>
+      </div>
+    </div>
+    <div class="toolbar-botonera">
+      <button mat-stroked-button 
+          matTooltip="Envía mail a olimpiadaredlarousse@gmail.com"
+          aria-label="Escribe a: olimpiadaredlarousse@gmail.com" 
+          matTooltipPosition="right">Contacto
+      </button>
+    </div>
+    <div class="toolbar-loguer">
+      <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item disabled>
+          <mat-icon>remove</mat-icon>
+          <span>Developer</span>
+        </button>
+      </mat-menu>
+    </div>
+  </mat-toolbar>
