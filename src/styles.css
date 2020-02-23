@@ -61,6 +61,15 @@ mis estilos
 .mat-stroked-button.mat-primary {
     color: var(--main-secondary-c1);
 }
+.login-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.login-full-width {
+    width: 100%;
+}
 td.mat-cell {
     color: var(--main-secondary-c1);
 }

@@ -9,12 +9,16 @@ import { FormsModule } from '@angular/forms';
 
 // asi jalamos todo lo de materialA
 import { MaterialModule } from './material.module';
+
+
 import { ConvocComponent } from './pages/convoc/convoc.component';
 import { HomeComponent } from './pages/home/home.component';
 import { GranfinalComponent } from './pages/granfinal/granfinal.component';
 import { SemifinalComponent } from './pages/semifinal/semifinal.component';
 import { FooterComponent } from './shared/footer/footer.component';
-
+import { DialogLoginComponent } from './shared/dialog-login/dialog-login.component';
+import { ProtegidaComponent } from './pages/protegida/protegida.component';
+import { CallbackComponent } from './pages/callback/callback.component';
 
 
 @NgModule({
@@ -24,7 +28,13 @@ import { FooterComponent } from './shared/footer/footer.component';
     HomeComponent,
     GranfinalComponent,
     SemifinalComponent,
-    FooterComponent
+    FooterComponent,
+    DialogLoginComponent,
+    ProtegidaComponent,
+    CallbackComponent
+  ],
+  entryComponents: [
+    DialogLoginComponent
   ],
   imports: [
     BrowserModule,

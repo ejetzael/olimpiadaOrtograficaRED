@@ -25,7 +25,12 @@
                 <a mat-button disabled>Finalistas</a>
             </div>
             <div class="toolbar-loguer">
-                <a mat-stroked-button disabled>Login</a>
+                <a mat-stroked-button 
+                    *ngIf="!auth.loggedIn"
+                    (click)="auth.login()" >Login</a>
+                <a mat-stroked-button color="warn" 
+                    *ngIf="auth.loggedIn"
+                    (click)="auth.logout()">Logout</a>
             </div>
         </mat-toolbar>
         <router-outlet></router-outlet>

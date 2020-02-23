@@ -1,0 +1,27 @@
+<h1 mat-dialog-title>Login</h1>
+<mat-dialog-content>
+    <form class="example-form">
+        <mat-form-field class="login-full-width">
+            <mat-label>Usuario</mat-label>
+            <input matInput placeholder="Usuario" value="">
+        </mat-form-field>
+
+        <mat-form-field class="login-full-width">
+            <mat-label>Password</mat-label>
+            <input matInput placeholder="Password" 
+            value="" 
+            type="password">
+        </mat-form-field>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-raised-button color="primary">
+        Ingresar
+    </button>
+    <button mat-raised-button mat-dialog-close>
+        Cerrar
+    </button>
+    <div>
+        <a mat-button routerLink="/">¿No tienes contraseña?</a>
+    </div>
+</mat-dialog-actions>

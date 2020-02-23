@@ -5,6 +5,9 @@ import { HomeComponent } from './pages/home/home.component';
 import { ConvocComponent } from './pages/convoc/convoc.component';
 import { SemifinalComponent } from './pages/semifinal/semifinal.component';
 import { GranfinalComponent } from './pages/granfinal/granfinal.component';
+import { ProtegidaComponent } from './pages/protegida/protegida.component';
+import { CallbackComponent } from './pages/callback/callback.component';
+
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -12,6 +15,8 @@ const routes: Routes = [
   { path: 'convocatoria', component: ConvocComponent },
   { path: 'semifinales', component: SemifinalComponent },
   { path: 'finalistas', component: GranfinalComponent },
+  { path: 'evaluacion', component: ProtegidaComponent },
+  { path: 'callback', component: CallbackComponent },
   { path: '**', pathMatch : 'full', redirectTo: '' }
 ];
 

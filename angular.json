@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "academind"
+  "defaultProject": "academind",
+  "cli": {
+    "analytics": "340bbc38-e705-4e97-80b4-a752cc9ba75d"
+  }
 }
