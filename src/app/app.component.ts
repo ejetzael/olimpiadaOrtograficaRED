@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
           public auth:AuthService ){}
 
   openDialog(){
-    console.log("alo");
+    console.log("lanzar openDialog");
     this.dialog.open( DialogLoginComponent );
   }
 

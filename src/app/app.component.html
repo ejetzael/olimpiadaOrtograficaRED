@@ -23,6 +23,8 @@
                 <a mat-button routerLink="convocatoria" routerLinkActive="active">Convocatoria</a>
                 <a mat-button disabled>Semi Final</a>
                 <a mat-button disabled>Finalistas</a>
+                <a mat-button routerLink="evaluacion" routerLinkActive="active"
+                *ngIf="auth.loggedIn">Cuestionario</a>
             </div>
             <div class="toolbar-loguer">
                 <a mat-stroked-button 

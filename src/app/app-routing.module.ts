@@ -7,6 +7,7 @@ import { SemifinalComponent } from './pages/semifinal/semifinal.component';
 import { GranfinalComponent } from './pages/granfinal/granfinal.component';
 import { ProtegidaComponent } from './pages/protegida/protegida.component';
 import { CallbackComponent } from './pages/callback/callback.component';
+import { AuthGuard } from './services/auth.guard';
 
 
 const routes: Routes = [
@@ -15,7 +16,10 @@ const routes: Routes = [
   { path: 'convocatoria', component: ConvocComponent },
   { path: 'semifinales', component: SemifinalComponent },
   { path: 'finalistas', component: GranfinalComponent },
-  { path: 'evaluacion', component: ProtegidaComponent },
+  { path: 'evaluacion', 
+    component: ProtegidaComponent,
+    canActivate: [ AuthGuard ]
+  },
   { path: 'callback', component: CallbackComponent },
   { path: '**', pathMatch : 'full', redirectTo: '' }
 ];

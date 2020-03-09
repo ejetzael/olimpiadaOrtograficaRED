@@ -19,7 +19,9 @@
               </div>
             </div>
             <div class="ed-item l-75 m-50 s-100 s-to-center s-left txt-semilight">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est numquam ratione aperiam nam iste ut assumenda cum eligendi at maiores rem sed esse necessitatibus quod perspiciatis placeat, perferendis eveniet doloribus!</p>
+              <pre *ngIf="auth.userProfile$ | async as profile">
+                <code>{{ profile | json }}</code>
+              </pre>
             </div>
           </div>
   
