@@ -1,27 +1,49 @@
-<h1 mat-dialog-title>Login</h1>
-<mat-dialog-content>
-    <form class="example-form">
-        <mat-form-field class="login-full-width">
-            <mat-label>Usuario</mat-label>
-            <input matInput placeholder="Usuario" value="">
-        </mat-form-field>
+<article fxLayout="row"  fxLayoutAlign="center center">
 
-        <mat-form-field class="login-full-width">
-            <mat-label>Password</mat-label>
-            <input matInput placeholder="Password" 
-            value="" 
-            type="password">
-        </mat-form-field>
+    <h1 mat-dialog-title>Log in</h1>
+
+    <form class="f" 
+        (ngSubmit)="onSubmitLog( f )" 
+        #f="ngForm">
+
+            <mat-dialog-content class="logertest">
+                <mat-form-field class="login-width">
+                    <mat-label>Usuario</mat-label>
+                    <input matInput 
+                    placeholder="Usuario" 
+                    [(ngModel)]="usuario.email"
+                    type="email"
+                    email 
+                    name="email"
+                    value="">
+                </mat-form-field>
+
+                <mat-form-field class="login-width">
+                    <mat-label>Password</mat-label>
+                    <input matInput 
+                    placeholder="Password" 
+                    [(ngModel)]="usuario.password"
+                    type="password" 
+                    name="password" 
+                    value="">
+                </mat-form-field>
+                <div *ngIf="f.submitted && f.controls['email'].errors">
+                    <span class="txt-invalid">email invalido</span>
+                </div>
+            </mat-dialog-content>
+
+        <button mat-raised-button color="primary" class="stroked-button-full">Ingresar</button>
+        
+        <button mat-raised-button  color="accent" class="stroked-button-full" mat-dialog-close>Cerrar</button>
     </form>
-</mat-dialog-content>
-<mat-dialog-actions>
-    <button mat-raised-button color="primary">
-        Ingresar
-    </button>
-    <button mat-raised-button mat-dialog-close>
-        Cerrar
-    </button>
-    <div>
-        <a mat-button routerLink="/">¿No tienes contraseña?</a>
+
+    <mat-dialog-actions align="end">
+        <div class="log-nopass">
+            <a mat-button (click)="notengo()">¿No tienes contraseña?</a>
+        </div>
+    </mat-dialog-actions>
+    <div class="alert-nouser">
+        <p hidden>Las contraseña se entregó vía correo electrónico al COACH que inscribió al alumno participante.</p>
     </div>
-</mat-dialog-actions>
+
+</article>

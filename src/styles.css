@@ -61,13 +61,20 @@ mis estilos
 .mat-stroked-button.mat-primary {
     color: var(--main-secondary-c1);
 }
+.mat-stroked-button.mat-accent {
+    color: var(--main-primary-c1);
+}
 .login-form {
     min-width: 150px;
     max-width: 500px;
     width: 100%;
 }
 
-.login-full-width {
+.login-width {
+    width: 100%;
+}
+.stroked-button-full {
+    margin-bottom: 10px !important;
     width: 100%;
 }
 td.mat-cell {
@@ -113,6 +120,9 @@ table {
     color: rgba(250,140,130,1);
     text-shadow: 1px 1px 2px rgba(20,80,110,.2);
 } */
+form.f {
+    margin-bottom: 0;
+}
 picture.titulo-imagen {
     text-align: center;
 }
@@ -278,4 +288,31 @@ picture.titulo-imagen img{
     .toolbar-botonera {
         display: none;
     }
-  }
+}
+
+.txt-invalid {
+    background: #c8dcc8;
+    padding: 3px;
+    display: block;
+    margin-bottom: 5px;
+    text-align: center;
+    border-radius: 5px;
+    color: #789678;
+}
+.log-nopass {
+    margin: 5px auto 10px;
+    color: var(--main-secondary-c1);
+    text-align: right;
+}
+
+.covid19 .mat-dialog-container {
+    color: var(--main-primary-c2);
+    background: rgba(255,255,255,.9);
+    width: 400px;
+}
+.alert-nouser {
+    max-width: 350px;
+    margin: auto;
+    text-align: center;
+    color:var(--main-primary-c2)
+}

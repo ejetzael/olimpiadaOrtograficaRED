@@ -7,21 +7,40 @@
           <div class="ed-item ">
             <h3 class="titulo">
               <picture class="titulo-imagen">
-                <source media="(max-width: 650px)" srcset="./assetsssets/images/final.svg">
-                  <img src="./assets/images/final.svg" alt="final con svg">
+                <source media="(max-width: 650px)" srcset="./assetsssets/images/evaluacion.svg">
+                  <img src="./assets/images/evaluacion.svg" alt="final con svg">
               </picture>
             </h3>
           </div>
           <div class="ed-container ed-item">
-            <div class="ed-item l-25 m-50 s-100 s-block-center">
-              <div class="pics">
-                <img src="./assets/images/participacion-pic.svg" alt="">
-              </div>
-            </div>
-            <div class="ed-item l-75 m-50 s-100 s-to-center s-left txt-semilight">
-              <pre *ngIf="auth.userProfile$ | async as profile">
-                <code>{{ profile | json }}</code>
-              </pre>
+            <div class="ed-item l-75 m-100 s-100 s-to-center s-left txt-semilight">
+              <p><i>Recado al desarrollador(a):</i></p>
+             <p>En esta pantalla existe una presentación que diría algo así:</p>
+             <p>- Estudiante a continuación comienza la prueba, al tocar el botón <b>[comenzar]</b> la prueba arranca. Recuerda que el tiempo es un factor de evaluación. -</p>
+             <p>Al clicar el botón de COMENZAR se muestra la primera pregunta de 50 reactivos de una base en FireBase, de las que se muestra un ejemplo:</p>
+             <picture class=" ">
+              <source media="(max-width: 650px)" srcset="./assetsssets/images/ejemplo.jpg" style="width: 100%;">
+                <img src="./assets/images/ejemplo.jpg" alt="final con svg">
+            </picture>
+            <p>El usuario avanza con siguiente y debió haber marcado alguna respuesta forzosamente  para poder continúar, en este caso B.</p>
+            <p>Al finalizar todos los reactivos de la prueba aparece un nuevo mensaje.</p>
+            <p>- Haz clic en el botón [FINALIZAR] para terminar la prueba, esto cerrará tu sesión. No intentes volver iniciar tu sesión, ello puede alterar tus resultados, recibirás un correo que confirma que realizaste la prueba exitosamente- .</p>
+            <p>El correo es a mano, podemos consultar directo a la base los nuevos registros y de allí basarnos.</p>
+            <p>Lo que registra la base de datos en FIREBASE es:</p>
+
+              <ul>
+                <li>Número de preguntas correctas</li>
+                <li>hora de comienzo de sesión</li>
+                <li>hora de cierre de sesión</li>
+                <li>tiempo en la sesión</li>
+                <li>ip de la sesión (ideal)</li>
+                <li>ID del reactivo errado (ideal)</li>
+                <li>Naturalmente usuario </li>
+              </ul>
+              <p>Sería de utilidad una bandera que indique al usuario que ya realizó la prueba y que volver a clicar [COMENZAR] puede tener una amonestación. Pero podemos consultar directo al json de la base la primera entrada del usuario e ignorar las subsecuentes.</p>
+              <p>Cuando se termina el cronómetro, la prueba se bloquea pero marca en la base el resultado de reactivos correctos.</p>
+              <p>El cronómetro es algo que puede retirarse del código y no afectar el funcionamiento, es decir, la prueba es independiente del <i>timing</i> pero si nosotros modificamos el código, puede o no, usarse el cronómetro. </p>
+              <p></p>
             </div>
           </div>
   
@@ -35,43 +54,6 @@
   
     <section class="ed-container ed-item item-contraccion">
       <div class="ed-container ed-item single-card">
-  
-        <div class="ed-item ">
-          <h3 class="titulo">
-            <picture class="titulo-imagen">
-              <source media="(max-width: 650px)" srcset="./assets/images/listado.svg">
-                <img src="./assets/images/listado.svg" alt="listado con svg">
-            </picture>
-          </h3>
-        </div>
-  
-        <div class="ed-container ed-item ">
-          <div class="ed-item m-center s-block-center txt-semilight">
-            <p class="s-block-center">Estos son los colegios son finalistas.</p>
-            <ul class="listado-participantes semi">
-              <li>
-                <p>Colegio Nombre Largo Largo</p>
-                <p>Coach Nombre Apellido Apellido</p>
-              </li>
-              <li>
-                <p>Colegio Nombre Largo Largo</p>
-                <p>Coach Nombre Apellido Apellido</p>
-              </li>
-              <li>
-                <p>Colegio Nombre Largo Largo</p>
-                <p>Coach Nombre Apellido Apellido</p>
-              </li>
-              <li>
-                <p>Colegio Nombre Largo Largo</p>
-                <p>Coach Nombre Apellido Apellido</p>
-              </li>
-              <li>
-                <p>Colegio Nombre Largo Largo</p>
-                <p>Coach Nombre Apellido Apellido</p>
-              </li>
-            </ul>
-          </div>
-        </div>
   
       </div>
       <aside class="ed-item manchones">

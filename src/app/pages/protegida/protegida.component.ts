@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from 'src/app/services/auth.service';
+import { AuthfibService } from 'src/app/services/authfib.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-protegida',
@@ -8,13 +9,17 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class ProtegidaComponent implements OnInit {
 
-  constructor( public auth: AuthService) { }
+  constructor( private auth: AuthfibService, private router: Router ) { }
 
   ngOnInit() {
     console.log("ngOnInit protegida");
-    this.auth.userProfile$.subscribe( perfil =>{
-      console.log('el perfil ->' + perfil );
-    })
+     
+  }
+
+  salir(){
+    this.auth.logout();
+    this.router.navigateByUrl('/convocatoria');
+    console.log( "El usuario ahora es =", this.auth.estaAutenticado() );
   }
 
 }

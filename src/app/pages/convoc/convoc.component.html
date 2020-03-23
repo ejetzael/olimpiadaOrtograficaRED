@@ -30,7 +30,7 @@
               <li>Metropolitana: Ciudad de México, Estado de México</li>
             </ul>
           <p>
-            Consulta el pdf de la convocatoria extendida para <a mat-flat-button color="accent" href="./assets/download/convocatoria-1olimpiada-n-ortografia-red-200220.pdf" target="_blank">más detalles. <mat-icon aria-hidden="false" aria-label="Ver pdf">keyboard_arrow_down</mat-icon>
+            Consulta el pdf de la convocatoria extendida para <a mat-flat-button color="accent" href="./assets/download/convocatoria-1olimpiada-n-ortografia-red-200320.pdf" target="_blank">más detalles. <mat-icon aria-hidden="false" aria-label="Ver pdf">keyboard_arrow_down</mat-icon>
             </a>
           </p>
         </div>
@@ -75,20 +75,9 @@
       <div class="ed-container ed-item ">
         <div class="ed-item l-100 m-100 s-100 s-block-center">
           <ul class="listado-participantes">
-            <li>
-              <img src="./assets/images/shield.png" alt="">
-            </li>
-            <li>
-              <img src="./assets/images/shield.png" alt="">
-            </li>
-            <li>
-              <img src="./assets/images/shield.png" alt="">
-            </li>
-            <li>
-              <img src="./assets/images/shield.png" alt="">
-            </li>
-            <li>
-              <img src="./assets/images/shield.png" alt="">
+            <li *ngFor="let aventado of dataParticipantes">
+              <img [src]="aventado.logo" alt="">
+              <span>{{ aventado.nombre }}</span>
             </li>
           </ul>
         </div>
@@ -111,7 +100,7 @@
           </div>
           <div class="ed-item s-block-center">
             <a mat-fab color="primary" 
-            href="./assets/download/convocatoria-1olimpiada-n-ortografia-red-200220.pdf" target="_blank">
+            href="./assets/download/convocatoria-1olimpiada-n-ortografia-red-200320.pdf" target="_blank">
               <mat-icon>cloud_download</mat-icon>
             </a>
           </div>

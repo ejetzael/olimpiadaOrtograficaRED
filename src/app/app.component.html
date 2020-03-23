@@ -24,16 +24,25 @@
                 <a mat-button disabled>Semi Final</a>
                 <a mat-button disabled>Finalistas</a>
                 <a mat-button routerLink="evaluacion" routerLinkActive="active"
-                *ngIf="auth.loggedIn">Cuestionario</a>
+                *ngIf="auth.estaAutenticado()">Cuestionario</a>
             </div>
             <div class="toolbar-loguer">
+                <a mat-stroked-button 
+                *ngIf="!auth.estaAutenticado()" 
+                (click)="openDialog()">Login</a>
+                <a mat-stroked-button 
+                color="warn" 
+                *ngIf="auth.estaAutenticado()"
+                (click)="salir()">Logout</a>
+            </div>
+            <!-- <div class="toolbar-loguer">
                 <a mat-stroked-button 
                     *ngIf="!auth.loggedIn"
                     (click)="auth.login()" >Login</a>
                 <a mat-stroked-button color="warn" 
                     *ngIf="auth.loggedIn"
                     (click)="auth.logout()">Logout</a>
-            </div>
+            </div> -->
         </mat-toolbar>
         <router-outlet></router-outlet>
     </mat-sidenav-content>

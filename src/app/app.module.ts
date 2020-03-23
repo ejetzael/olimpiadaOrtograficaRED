@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 // asi jalamos todo lo de materialA
 import { MaterialModule } from './material.module';
@@ -19,6 +20,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { DialogLoginComponent } from './shared/dialog-login/dialog-login.component';
 import { ProtegidaComponent } from './pages/protegida/protegida.component';
 import { CallbackComponent } from './pages/callback/callback.component';
+import { RecalendarizacionComponent } from './shared/recalendarizacion/recalendarizacion.component';
 
 
 @NgModule({
@@ -31,7 +33,8 @@ import { CallbackComponent } from './pages/callback/callback.component';
     FooterComponent,
     DialogLoginComponent,
     ProtegidaComponent,
-    CallbackComponent
+    CallbackComponent,
+    RecalendarizacionComponent
   ],
   entryComponents: [
     DialogLoginComponent
@@ -42,7 +45,8 @@ import { CallbackComponent } from './pages/callback/callback.component';
     BrowserAnimationsModule,
     LayoutModule,
     FormsModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
