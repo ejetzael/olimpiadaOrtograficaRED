@@ -5,6 +5,8 @@ Proyecto realizado para RED Larousse. Evaluación en línea de estudiantes repre
 
 ## Descripción de SPA ⚙️
 _ Hay secciones de contenido públicas y otras privadas que requieren sesión activa, esto esta resuelto con Guard/Angular y FireBase, la intención de utilizar Fb es que no se tiene acceso pleno a las BBDD del servidor en el que está  montado * [redlarousse.mx/olimpiadanortografia](http://redlarousse.mx/olimpiadanortografia/) y además actualmente se está  migrando de servidor, es importante conocer la data que te otorga Fb. _
+
+---
 _ Para poder hacer TEST de esta SPA puedes utilizar los siguientes accesos: _
 
 ---
@@ -19,12 +21,16 @@ _ Se utiliza SweetAler2 Angular/materialDesign _
 * Angular Material Design 
 * Auth0 - en este caso se descartó porque actualmente tiene un bug que hace que la sesión se pierda con un refresh. Por lo que si se encuentra código que no se haya retirado, ignorarlo.
 
+----
+
 _ La documentación de AngularMD es fea, pero útil., SweetAlert2 me desagrada que todo mundo lo usa. _
 
 ### Comandos utiles
-_ Sólo coloc a mano comandos que constantemente tengo que buscr en Google. _
+_ Coloco comandos que constantemente tengo que buscar en Google. _
 
+```
 ng g c 'nombre de' --module=app.module --skipTests
+```
 
 ```
 ng build --prod --base-href 'https://redlarousse.mx/olimpiadanortografia/2020/'
@@ -33,6 +39,7 @@ ng build --prod --base-href 'https://redlarousse.mx/olimpiadanortografia/2020/'
 ```
 ng g c NOMBRE --module=app.module --skipTest -> porque existen dos module hay que definir en cual se deben cargar los nuevos elementos.
 ```
+---
 
 _ Tener presente que existen DOS module.ts dado que se separó AngularMD del resto de la lógica. _ 
 
